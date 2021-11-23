@@ -2,18 +2,31 @@
   display: flex;
   flex-direction: row;
   background-color: #fafafa;
+  overflow: hidden;
 }
 table {
   width: 100%;
+  border-radius: 5px;
+}
+thead tr {
+  border-radius: 5px;
+  padding: 0px;
+  color: #655bce;
+}
+tr th {
+  margin-left: 0px;
+  border-radius: 5px;
+}
+td {
+  text-align: center;
 }
 .div-column {
-  margin-top: -450px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 24px;
 }
 
 .hr-infinity {
@@ -28,4 +41,11 @@ h1 {
 a {
   text-decoration: none;
   color: #7e7d68;
+}
+
+.button-edit {
+  color: #655bce;
+}
+.button-delete {
+  color: #bb5bce;
 }

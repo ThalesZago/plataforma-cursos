@@ -1,7 +1,8 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 .example-container {
   width: 200px;
-  height: 1080px;
+  height: 100vh;
+  background-color: transparent;
 }
 
 a {
@@ -23,7 +24,6 @@ a:hover {
 .example-sidenav-content {
   display: flex;
   height: 100%;
-  width: 150px;
   align-items: center;
   justify-content: flex-start;
 }

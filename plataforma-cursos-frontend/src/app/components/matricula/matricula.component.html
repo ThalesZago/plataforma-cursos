@@ -1,1 +1,45 @@
-<p>matricula works!</p>
+<div class="container">
+  <app-navbar> </app-navbar>
+  <div class="div-column">
+    <h1>Matrículas</h1>
+    <hr class="hr-infinity" />
+    <table class="mat-elevation-z8">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>RA Aluno</th>
+          <th>Inscrição Curso</th>
+          <th>Ações</th>
+          <th>
+            <button mat-button (click)="handleModal()">
+              <mat-icon> add </mat-icon>
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let oEnrollment of aEnrollment">
+          <td>{{ oEnrollment.id }}</td>
+          <td>{{ oEnrollment.student_id }}</td>
+          <td>{{ oEnrollment.course_id }}</td>
+          <td>
+            <button
+              mat-button
+              (click)="handleModal(oEnrollment)"
+              class="button-edit"
+            >
+              <mat-icon> edit </mat-icon>
+            </button>
+            <button
+              mat-button
+              class="button-delete"
+              (click)="handleDelete(oEnrollment)"
+            >
+              <mat-icon> delete </mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

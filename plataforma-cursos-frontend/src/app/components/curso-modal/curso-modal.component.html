@@ -1,0 +1,54 @@
+<div class="header" fxLayout="row" fxLayoutAlign="space-between center">
+  <span>
+    {{ course ? "Editar" : "Criar" }}
+    Curso
+  </span>
+
+  <button mat-button mat-icon-button (click)="handleClose()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<mat-divider></mat-divider>
+
+<form
+  class="container"
+  fxLayoutAlign="space-between center"
+  fxLayout="row"
+  [formGroup]="form"
+  (submit)="handleSubmit()"
+>
+  <mat-form-field appearance="fill" fxFlex="45%">
+    <mat-label> Nome </mat-label>
+
+    <input #titleInput matInput required formControlName="title" />
+
+    <mat-icon matPrefix>account_circle</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" fxFlex="45%">
+    <mat-label> Descrição </mat-label>
+
+    <input #descriptionInput matInput required formControlName="description" />
+
+    <mat-icon matPrefix>article</mat-icon>
+  </mat-form-field>
+</form>
+
+<div
+  class="footer"
+  fxLayout="row"
+  fxLayoutAlign="flex-end center"
+  fxLayoutGap="10px"
+>
+  <button mat-button (click)="handleClose()">Cancelar</button>
+
+  <button
+    mat-flat-button
+    color="primary"
+    type="submit"
+    (click)="handleSubmit()"
+  >
+    {{ course ? "Editar" : "Criar" }}
+  </button>
+</div>

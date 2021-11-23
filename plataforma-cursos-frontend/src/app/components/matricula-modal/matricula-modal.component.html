@@ -1,0 +1,69 @@
+<div class="header" fxLayout="row" fxLayoutAlign="space-between center">
+  <span>
+    {{ enrollment ? "Editar" : "Criar" }}
+    Matrícula
+  </span>
+
+  <button mat-button mat-icon-button (click)="handleClose()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<mat-divider></mat-divider>
+
+<form
+  class="container"
+  fxLayoutAlign="space-between center"
+  fxLayout="row"
+  [formGroup]="form"
+  (submit)="handleSubmit()"
+>
+  <mat-form-field appearance="fill" fxFlex="30%">
+    <mat-label> Nome </mat-label>
+
+    <input #nomeInput matInput required formControlName="name" />
+
+    <mat-icon matPrefix>account_circle</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" fxFlex="30%">
+    <mat-label> Email </mat-label>
+
+    <input #emailInput matInput required formControlName="email" />
+
+    <mat-icon matPrefix>email</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" fxFlex="30%">
+    <mat-label> Data de Nascimento </mat-label>
+
+    <input
+      #birthdayInput
+      matInput
+      [matDatepicker]="picker"
+      formControlName="birthday"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+
+    <mat-icon matPrefix>event</mat-icon>
+  </mat-form-field>
+</form>
+
+<div
+  class="footer"
+  fxLayout="row"
+  fxLayoutAlign="flex-end center"
+  fxLayoutGap="10px"
+>
+  <button mat-button (click)="handleClose()">Cancelar</button>
+
+  <button
+    mat-flat-button
+    color="primary"
+    type="submit"
+    (click)="handleSubmit()"
+  >
+    {{ enrollment ? "Editar" : "Criar" }}
+  </button>
+</div>
