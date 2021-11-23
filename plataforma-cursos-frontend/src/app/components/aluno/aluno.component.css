@@ -49,3 +49,19 @@ a {
 .button-delete {
   color: #bb5bce;
 }
+
+.campo-busca {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid #655bce;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.input-search {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}

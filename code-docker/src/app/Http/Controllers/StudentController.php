@@ -23,7 +23,7 @@ class StudentController extends Controller
         $rules = [];
 
         if (!$request['birthday'] === "") {
-            $rules = ['birthday' => 'date'] + $rules;
+            $rules = ['birthday' => 'string'] + $rules;
         }
         $rules = $rules + ['name' => 'required|string|max:255'];
         $rules = $rules + ['email' => 'required|email|unique:students,email'];
@@ -38,7 +38,7 @@ class StudentController extends Controller
         $validatedData = $request->validate([
             'name' => 'string|max:255',
             'email' => 'email',
-            'birthday' => 'date'
+            'birthday' => 'string'
         ]);
 
         $student = Student::findOrFail($id);

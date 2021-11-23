@@ -7,8 +7,9 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>RA Aluno</th>
-          <th>Inscrição Curso</th>
+          <th>RA</th>
+          <th>Nome</th>
+          <th>Curso</th>
           <th>Ações</th>
           <th>
             <button mat-button (click)="handleModal()">
@@ -21,7 +22,8 @@
         <tr *ngFor="let oEnrollment of aEnrollment">
           <td>{{ oEnrollment.id }}</td>
           <td>{{ oEnrollment.student_id }}</td>
-          <td>{{ oEnrollment.course_id }}</td>
+          <td>{{ oEnrollment.student.name }}</td>
+          <td>{{ oEnrollment.course.title }}</td>
           <td>
             <button
               mat-button

@@ -18,35 +18,24 @@
   [formGroup]="form"
   (submit)="handleSubmit()"
 >
-  <mat-form-field appearance="fill" fxFlex="30%">
-    <mat-label> Nome </mat-label>
+  <mat-form-field appearance="fill" fxFlex="45%">
+    <mat-label> Registro do Aluno (RA) </mat-label>
 
-    <input #nomeInput matInput required formControlName="name" />
+    <input #studentInput matInput required formControlName="student_id" />
 
     <mat-icon matPrefix>account_circle</mat-icon>
   </mat-form-field>
 
-  <mat-form-field appearance="fill" fxFlex="30%">
-    <mat-label> Email </mat-label>
+  <mat-form-field appearance="fill" fxFlex="45%">
+    <mat-label> Curso </mat-label>
 
-    <input #emailInput matInput required formControlName="email" />
+    <mat-select formControlName="course_id">
+      <mat-option *ngFor="let oCourse of aCourse" [value]="oCourse.id">
+        {{ oCourse.title }}
+      </mat-option>
+    </mat-select>
 
-    <mat-icon matPrefix>email</mat-icon>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" fxFlex="30%">
-    <mat-label> Data de Nascimento </mat-label>
-
-    <input
-      #birthdayInput
-      matInput
-      [matDatepicker]="picker"
-      formControlName="birthday"
-    />
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-
-    <mat-icon matPrefix>event</mat-icon>
+    <mat-icon matPrefix>course</mat-icon>
   </mat-form-field>
 </form>
 

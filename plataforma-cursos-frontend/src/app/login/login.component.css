@@ -17,11 +17,46 @@
   align-items: center;
 }
 .card {
-  background-color: whitesmoke;
+  background-color: white;
   width: 600px;
   height: 600px;
   border-radius: 5px;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  opacity: 0.9;
+}
+.card-input {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+
+  font-size: 1.5em;
+}
+
+.input-login {
+  border-radius: 5px;
+  border: 0px;
+  background-color: gray;
+  width: 400px;
+  height: 30px;
+  font-size: 1.5em;
+  color: white;
+}
+.img-finnet {
+  margin-top: -130px;
+  margin-bottom: 10px;
+}
+
+.input-button {
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: #655bce;
+  width: 400px;
+  height: 40px;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
 }
