@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: #fafafa;
+}
+table {
+  width: 100%;
+}
+.div-column {
+  margin-top: -450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hr-infinity {
+  margin-top: -15px;
+  width: 100%;
+  border: 1px solid #655bce;
+}
+h1 {
+  color: #655bce;
+}
+
+a {
+  text-decoration: none;
+  color: #7e7d68;
+}

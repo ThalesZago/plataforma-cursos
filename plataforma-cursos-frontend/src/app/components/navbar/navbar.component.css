@@ -1,0 +1,36 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.example-container {
+  width: 200px;
+  height: 1080px;
+}
+
+a {
+  display: flex;
+  padding-top: 30px;
+  padding-right: 30px;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+a:hover {
+  color: #655bce;
+  border-bottom: 1px solid #655bce;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  width: 150px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.example-sidenav {
+  width: 180px;
+  background-color: #00020c;
+  padding: 20px;
+  opacity: 0.8;
+}
