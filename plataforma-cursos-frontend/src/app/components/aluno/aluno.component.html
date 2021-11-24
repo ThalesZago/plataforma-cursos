@@ -5,6 +5,7 @@
     <hr class="hr-infinity" />
     <div class="input-search">
       <input
+        [(ngModel)]="filter"
         #campoBusca
         class="campo-busca"
         type="search"
@@ -27,7 +28,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let oStudent of aStudent">
+        <tr *ngFor="let oStudent of aStudent | filter: filter; let i = index">
           <td>{{ oStudent.id }}</td>
           <td>{{ oStudent.name }}</td>
           <td>{{ oStudent.email }}</td>

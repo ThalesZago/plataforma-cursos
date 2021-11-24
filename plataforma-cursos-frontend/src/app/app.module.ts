@@ -31,20 +31,20 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Ng2SearchPipeModule } from 'ng2-search-filter'; // Importação
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlunoModalComponent } from './components/aluno-modal/aluno-modal.component';
 import { AlunoComponent } from './components/aluno/aluno.component';
+import { CursoModalComponent } from './components/curso-modal/curso-modal.component';
 import { CursoComponent } from './components/curso/curso.component';
 import { HomeComponent } from './components/home/home.component';
+import { MatriculaModalComponent } from './components/matricula-modal/matricula-modal.component';
 import { MatriculaComponent } from './components/matricula/matricula.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './login/login.component';
 import { AlunoService } from './services/aluno.service';
 import { ErrorService } from './services/error.service';
-import { MatriculaModalComponent } from './components/matricula-modal/matricula-modal.component';
-import { CursoModalComponent } from './components/curso-modal/curso-modal.component';
-import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [

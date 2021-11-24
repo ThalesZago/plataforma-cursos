@@ -41,6 +41,7 @@ export class AlunoComponent implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild('campoBusca') campoBusca!: ElementRef<HTMLInputElement>;
+  @ViewChild('filter') filter!: string;
 
   resultsLength = 0;
 
